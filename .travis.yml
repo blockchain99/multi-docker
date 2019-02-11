@@ -16,6 +16,7 @@ after_success:
   # Log in to the docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   # Take those images and push them to docker hub 
+  # commit to github to add this yml to github
   - docker push blockchain99/multi-client
   - docker push blockchain99/multi-nginx
   - docker push blockchain99/multi-server
